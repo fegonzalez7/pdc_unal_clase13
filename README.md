@@ -114,40 +114,196 @@ print(bandera)
 ### Recorrer listas 
 #### the for approach
 Es la manera más práctica, en lo técnico, *Phyton* crea una ennumeración y se recorre con el ciclo for.
-**Ejemplo 7:** Operador *in*
+
+**Ejemplo 7:** *for* para recorrer una lista.
 ```python
 lista5 = [1, 2, 3, 4, 5]
-print(5 in lista5) # True
+for i in lista5:
+	print(i) 
 ```
 
+```python
+lista5 = [1, 2, 3, 4, 5]
+for i in range(0,len(lista5)):
+	print(lista5[i]) 
+```
 
 #### the while approach
+Para recorrer una lista se debe utilizar la indexación y un indice con actualización.
 
-
+**Ejemplo 7:** *while* para recorrer una lista.
+```python
+lista5 = [1, 2, 3, 4, 5]
+i : int = 0
+while i < len(lista5)
+	print(lista5[i]) 
+```
 
 ### List comprenhension (estaba dificil de traducir)
+Es una forma generar listas a partir de condiciones especificas en una sola linea de código.
+
+**Ejemplo 8:** Lista con cubos del 3 al 6.
+```python
+listaCubos = [x**3 for x in range(3,7)]
+print(listaCubos) 
+```
+
+```python
+listaCubos = [(lambda x : x**3) for x in range(3,7)]
+print(listaCubos) 
+```
+
+```python
+listaCubos = [27, 64, 125, 216] # Hardcoded
+print(listaCubos) 
+```
+
+```python
+listaCubos = list(range(3,7)) # Dolor
+for i in range(3,7):
+	listaCubos[i] = listaCubos[i]**3
+print(listaCubos) 
+```
 
 ## Métodos utiles
 ### len
+Retorna la cantidad de elementos de una lista.
+
+**Ejemplo 9:** Usos de *len()*
+```python
+lista = [1, 2, 3, 4]
+nombre = ["Minch", "Yoda"]
+trabajo = ["Stars", "War", "Movie"]
+empty = []
+print(len(lista))
+print(len(nombre))
+print(len(trabajo))
+print(len(empty))
+```
 
 ### append
+Agrega elementos al final de la lista.
+
+**Ejemplo 10:** Usos de *append()*
+```python
+nombres = ["Antonio", "Johan"]
+nombres.append("Monica")
+print(nombres)
+nombres.append("Maria")
+print(nombres)
+nombres.append("Mabel")
+print(nombres)
+```
 
 ### pop
+Elimina el elemento de un determinado índice, en caso de no especificarse índice, se elimina el último elemento. El método *pop* retorna el elemento eliminado.
+
+**Ejemplo 11:** Usos de *pop()*
+```python
+nombres = ["Antonio","Johan","Monica","Maria","Mabel"]
+nombres.pop(1) #remueve a Johan
+print(nombres)
+nombre_borrado = nombres.pop() # remueve a Mabel
+print(nombre_borrado + " ha sido eliminada de la lista.")
+print(nombres)
+```
 
 ### insert
+Permite insertar (agregar) elementos en una posición específica de una lista.
+
+**Ejemplo 12:** Usos de *insert()*
+```python
+nombres = ["Antonio", "Johan", "Maria"]
+nombres.insert(0, "Guttag")
+print(nombres)
+nombres.insert(2, "Peter")
+print(nombres)
+nombres.insert(len(nombres)//2, 10)
+print(nombres)
+```
 
 ### remove
+Permite eliminar la primera aparición (de izquierda a derecha) de un elemento de una lista.
+
+**Ejemplo 13:** Usos de *remove()*
+```python
+lista = ["a", "e", "i", "o", "u", "i", "x"]
+lista.remove("x")
+print(lista)
+lista.remove("i")
+print(lista)
+lista.remove("i")
+print(lista)
+```
 
 ### count
+Obtiene las veces que un elemento se encuentra en una lista.
+
+**Ejemplo 14:** Usos de *count()*
+```python
+lista = [4, 3, 8, 8, 2, 5, 4, 6, 8, 9]
+print(lista.count(2))
+print(lista.count(8))
+print(lista.count(5))
+print(lista.count(7))
+```
 
 ### index
+El método index obtiene la primera ocurrencia de un elemento en una lista. Si el objeto buscado no se encuentra en la lista, se generará una excepción....luego vemos como pilotearlo.
 
-### min
+**Ejemplo 15:** Usos de *index()*
+```python
+lista = [4, 3, 8, 8, 2, 5, 4, 6, 8, 9]
+print(lista.index(2))
+print(lista.index(8))
+print(lista.index(5))
+```
 
-### max
+### max - min
+Obtiene el máximo/mínimo elemento de una lista.
+
+**Ejemplo 16:** Usos de *max() / min()*
+```python
+t = [4, 5, -1, 6, 7]
+print(max(t))
+print(min(t))
+```
 
 ### sort
+Ordena una lista. Se le puede indicar si ascendente o descendentemente, al igual que el criterio (llave) usado para ordenar.
+
+**Ejemplo 16:** Usos de *sort*
+```python
+lista = [4, 5, -1, 6, 7]
+lista.sort() # De menor a mayor
+print(lista)
+lista.sort(reverse = True) # De mayor a menor
+print(lista)
+```
+
+**Ejercicio:** Revisar la diferencia entre sort() y sorted().
 
 ## Listas como arreglos
+Un arreglo o vector es una tupla o **lista** de n elementos del mismo tipo (En este curso usaremos las listas para representar arreglos). A los elementos de un arreglo se les llama componentes del arreglo.
 
+ - []: Arreglo vacio.
+ - [1, 0, 7, -2, 8]: Un arreglo de enteros de 5 componentes.
+ - ['Radio', 'Lado']: Un arreglo de cadenas de 2 componentes. 
+ - [1.3, 2.4, -3.0, 4.5]: Un arreglo de reales de 4 componentes.
+ - [True, False, False]: Un arreglo de booleanos de 3 componentes.
 
+En general, un arreglo *v* se puede representar de la siguiente forma:
+
+$$ v = [v_0, v_1, v_2, \cdots , v_{n-2}, v_{n-1}]$$
+
+donde el arreglo está constituido por n componentes.
+
+En general las listas tienen todas las propiedades para definir un vector en el sentido matemático, no obstante los operadores definidos para las listas, no están sobrecargados para representar operaciones matemáticas, para ello en el futuro se usará [numpy](https://numpy.org/).
+
+## Reto 10
+Desarrolle la mayoría de ejercicios en clase. Para cada punto cree un programa individual. Al finalizar suba todo a un repo y subalo al canal reto_10 en slack.
+
+1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
+2. Desarrollar un algoritmo que calcule el [producto punto](https://www.cuemath.com/algebra/dot-product/) de dos arreglos de números enteros (reales) de igual tamaño.
+3. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
+4. Revisar que son los algoritmos de *sorting*, entender *bubble-sort* ([enlace](https://www.geeksforgeeks.org/bubble-sort/) a implementación).
