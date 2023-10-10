@@ -77,16 +77,16 @@ Utilizando en operador *[index]* se accede a los elementos de la lista. En pytho
 **Ejemplo 5:** Indexación
 ```python
 lista5 = [1, 2, 3, 4, 5]
-print(lista[0]) # Imprime 1
-print(lista[3]) # Imprime 4
-print(lista[-1]) # Imprime 5
-print(lista[-2]) # Imprime 4
+print(lista5[0]) # Imprime 1
+print(lista5[3]) # Imprime 4
+print(lista5[-1]) # Imprime 5
+print(lista5[-2]) # Imprime 4
 ```
 
 **Ejemplo 6:** Problemas con la Indexación
 ```python
 lista5 = [1, 2, 3, 4, 5]
-print(lista[5]) # IndexError list index out of range
+print(lista5[5]) # IndexError list index out of range
 ```
 
 El *slicing* es quizá la operación mas poderosa de listas y tuplas en python. No creo poder explicarlo mejor de lo que está en este [post](https://stackoverflow.com/questions/509211/understanding-slicing) de *stackoverflow*.
