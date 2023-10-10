@@ -139,7 +139,7 @@ while i < len(lista5):
 	print(lista5[i]) 
 ```
 
-### List comprenhension (estaba dificil de traducir)
+### List comprehension (estaba dificil de traducir, pero una traducción acertada puede ser *Comprensión de listas*)
 Es una forma generar listas a partir de condiciones especificas en una sola linea de código.
 
 **Ejemplo 8:** Lista con cubos del 3 al 6.
