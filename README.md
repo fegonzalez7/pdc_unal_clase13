@@ -113,7 +113,7 @@ print(bandera)
 
 ### Recorrer listas 
 #### the for approach
-Es la manera más práctica, en lo técnico, *Phyton* crea una ennumeración y se recorre con el ciclo for.
+Es la manera más práctica, en lo técnico, *Python* crea una enumeración y se recorre con el ciclo for.
 
 **Ejemplo 7:** *for* para recorrer una lista.
 ```python
