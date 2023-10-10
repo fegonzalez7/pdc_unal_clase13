@@ -45,7 +45,7 @@ print(listaVariada[3]) # Imprime 4.0
 print(listaVariada[4]) # Imprime cinco
 ```
 
-## Operadores 
+## Operaciones
 ### Concatenar
 Se utiliza el operador *+* concatena de forma horizontal las listas operadas.
 
