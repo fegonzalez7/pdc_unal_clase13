@@ -165,7 +165,7 @@ for i in range(3,7):
 print(listaCubos) 
 ```
 
-## Métodos utiles
+## Métodos útiles
 ### len
 Retorna la cantidad de elementos de una lista.
 
