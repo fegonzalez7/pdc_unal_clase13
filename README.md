@@ -30,7 +30,7 @@ listaVariada = [1, 2, 'tres', 4.0, "cinco"]
 ```
 
 Las listas tienen dos atributos: el elemento almacenado y el indice.
- - **Variable almacenada:** Puede ser un objeto de cualquier tipo (de momento pensemoslo como una variable de los tipos fundamentales de *Python*).
+ - **Variable almacenada:** Puede ser un objeto de cualquier tipo (de momento pensémoslo como una variable de los tipos fundamentales de *Python*).
  - **Indice:** Es la posición en la cual se almacena la variable. Se trata de un dato entero que inicia sigue la secuencia *cantidad - 1* elemntos de la lista, esto es, el primer indice es 0, el segundo 1 hasta llegar a *n-1*, donde n es la cantidad de elementos de la lista.
 
 **Ejemplo 2:** Acceso por indice
