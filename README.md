@@ -20,13 +20,13 @@
 lista = []
 lista2 = list()
 # Lista con un elemento tipo int
-listaEntero = [1]
+lista_entero = [1]
 # Lista con dos elementos tipo int
-listaEnteros = [1, 2]
+lista_enteros = [1, 2]
 # Lista con un string y un entero
-listaMixta = ['hola', 1]
+lista_mixta = ['hola', 1]
 # Lista con cinco elementos
-listaVariada = [1, 2, 'tres', 4.0, "cinco"]
+lista_variada = [1, 2, 'tres', 4.0, "cinco"]
 ```
 
 Las listas tienen dos atributos: el elemento almacenado y el indice.
@@ -36,13 +36,13 @@ Las listas tienen dos atributos: el elemento almacenado y el indice.
 **Ejemplo 2:** Acceso por indice
 ```python
 # Lista con cinco elementos
-listaVariada = [1, 2, 'tres', 4.0, "cinco"]
-print(listaVariada)
-print(listaVariada[0]) # Imprime 1
-print(listaVariada[1]) # Imprime 2
-print(listaVariada[2]) # Imprime tres
-print(listaVariada[3]) # Imprime 4.0
-print(listaVariada[4]) # Imprime cinco
+lista_variada = [1, 2, 'tres', 4.0, "cinco"]
+print(lista_variada)
+print(lista_variada[0]) # Imprime 1
+print(lista_variada[1]) # Imprime 2
+print(lista_variada[2]) # Imprime tres
+print(lista_variada[3]) # Imprime 4.0
+print(lista_variada[4]) # Imprime cinco
 ```
 
 ## Operaciones
@@ -144,25 +144,25 @@ Es una forma generar listas a partir de condiciones especificas en una sola line
 
 **Ejemplo 8:** Lista con cubos del 3 al 6.
 ```python
-listaCubos = [x**3 for x in range(3,7)]
-print(listaCubos) 
+lista_cubos = [x**3 for x in range(3,7)]
+print(lista_cubos) 
 ```
 
 ```python
-listaCubos = [(lambda x : x**3) for x in range(3,7)]
-print(listaCubos) 
+lista_cubos = [(lambda x : x**3) for x in range(3,7)]
+print(lista_cubos) 
 ```
 
 ```python
-listaCubos = [27, 64, 125, 216] # Hardcoded
-print(listaCubos) 
+lista_cubos = [27, 64, 125, 216] # Hardcoded
+print(lista_cubos) 
 ```
 
 ```python
-listaCubos = list(range(3,7)) # Dolor
+lista_cubos = list(range(3,7)) # Dolor
 for i in range(3,7):
-	listaCubos[i] = listaCubos[i]**3
-print(listaCubos) 
+	lista_cubos[i] = lista_cubos[i]**3
+print(lista_cubos) 
 ```
 
 ## Métodos útiles
@@ -300,7 +300,7 @@ donde el arreglo está constituido por n componentes.
 
 En general las listas tienen todas las propiedades para definir un vector en el sentido matemático, no obstante los operadores definidos para las listas, no están sobrecargados para representar operaciones matemáticas, para ello en el futuro se usará [numpy](https://numpy.org/).
 
-## Reto 10
+## Reto 9
 Desarrolle la mayoría de ejercicios en clase. Para cada punto cree un programa individual. Al finalizar suba todo a un repo y subalo al canal reto_10 en slack.
 
 1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
